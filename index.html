@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="Generative Art, Diffusion Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Art-Free Generative Models:
+    Art Creation Without Graphic Art Knowledge</title>
+    <link rel="icon" href="data:,"> <!-- Empty favicon -->
+
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Art-Free Generative Models:
+            Art Creation Without Graphic Art Knowledge</h1>
+          <div class="is-size-5 publication-authors">
+            <div class="author-block">
+                <a href="https://rhfeiyang.top/">Hui Ren</a><sup>*, 1</sup>,
+              </div>
+              <div class="author-block">
+                <a href="https://joaanna.github.io/">Joanna Materzynska</a><sup>*, 2</sup>,
+              </div>
+              <div class="author-block">
+                <a href="https://rohitgandikota.github.io/">Rohit Gandikota</a><sup>3</sup>,
+              </div>
+              <div class="author-block">
+                <a href="https://baulab.info/">David Bau</a><sup>3</sup>,
+              </div>
+              <div class="author-block">
+                <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba</a><sup>2</sup>,
+              </div>
+              
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>ShanghaiTech</span>
+                <span class="author-block"><sup>2</sup>MIT</span>
+                <span class="author-block"><sup>3</sup>Northeastern University</span>
+              </div>
+              
+              <p class="is-size-6">*Co-first authors</p>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://joaanna.github.io/art-free-diffusion"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://joaanna.github.io/art-free-diffusion"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://joaanna.github.io/art-free-diffusion"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+    <div class="container is-max-desktop" style="width: 80%; max-width: none;">
+      <div class="hero-body" style="text-align: center;">
+          <img 
+            src="./static/images_art/teaser_antoniov4.jpg" 
+            alt="Teaser Image" 
+            style="max-width: 100%; width: auto; height: auto; display: block;"
+          >
+  
+        <h2 class="subtitle has-text-centered" style="font-size: 14px;">
+          (a) We introduce Art-Free SAM, a carefully curated text-to-image dataset with minimal graphic art content, used to pretrain Art-Free Diffusion model (θ).  <br>
+          (b) We show three famous artists styles reproduced and generalized by Art-Free Diffusion after exposing an Art Adapter to a small sample (A) of each artist’s work.
+        </h2>
+      </div>
+    </div>
+  </section>
+  
+
+
+                    </div>
+                </div>
+            </div>
+  
+    </div>
+  </div>
+</section> 
+
+
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We explore the question: ``How much prior art knowledge is needed to create art?".
+            To investigate this, we propose a text-to-image generation model trained without access to art-related content. 
+            We then introduce a simple yet effective method to learn an art adapter using only a few examples of selected artistic styles.
+            Our experiments show that art generated using our method is perceived by users as comparable to art produced by models trained on large, art-rich datasets.
+            Finally, through data attribution techniques, we illustrate how examples from both artistic and non-artistic datasets contributed to the creation of new artistic styles.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Art-Free Diffusion</h2>
+          <div class="content has-text-justified">
+            <p>
+           
+                Distinguishing "art" from "not art" in natural images is challenging, as artistic expression often emerges in unexpected places, from sculptural designs to logos and branding on everyday objects. 
+                Our objective is to separate visual art from natural imagery, ensuring everyday scenes and objects are represented while minimizing intentional artistic elements. This figure illustrates our approach to defining the boundary between art and non-art images. We exclude graphic arts but retain other forms, such as architecture. The spectrum ranges from "definitely art" (e.g., photographs of tapestries, baroque architecture, or paintings) to "maybe art" (e.g., accidental art that isn't the main subject).
+                 It further includes "maybe not art" (e.g., artistic elements in daily objects like doors, signboards, or decorative cakes) and "definitely not art" (e.g., nature or landscapes).
+                                    </p>
+            <p>
+                We train the Art-Free Diffusion on a dataset containing minimal graphic content. Our Art-Free Diffusion model is built
+            on a latent diffusion architecture, to prevent any art-related knowledge from leaking through the text embeddings, we instead use a language-only Text Encoder based on BERT.
+                </p>
+            <img 
+            src="./static/images_art/artnotartv2.jpg" 
+            alt="Teaser Image" 
+            style="max-width: 100%; width: auto; height: auto; display: block;"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop" style="width: 100%; max-width: none;">
+      <div class="hero-body" style="text-align: center;">
+    
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified" style="text-align: justify;">
+            <p style="text-align: justify;">
+                To train an Art-Style Adapter, we collect a few examples of artworks in a specific style <em>X<sub>0</sub> ∈ A</em> and caption the content of the artwork. 
+                This can be done automatically or manually. To connect the newly learned style information with specific tokens in the prompt, we append a text 
+                <em>"in the style of V<sup>*</sup> art"</em> to the content prompt, denoted as <em>C<sup>*</sup></em>.
+
+                To enable the model to learn this new artistic style, we fine-tune the U-Net module using LoRA.
+
+                The generated image should match the style of a small exemplar dataset when prompted with a caption <em>C<sup>*</sup></em>, which includes a style prefix 
+                <em>V<sup>*</sup></em>.
+ 
+                For example, if <em>C<sup>*</sup> = "People walking along a riverside path with colorful trees in the style of V<sup>*</sup>"</em>, the image should reflect both 
+                the scene (content) and the specified artistic style. Content loss ensures that the visual elements of the prompt 
+                <em>C = "People walking along a riverside path with colorful trees"</em> are accurately depicted, while style loss maintains the distinct artistic qualities 
+                associated with <em>V<sup>*</sup></em>.
+            </p>
+            <img 
+            src="./static/images_art/method_antonio.jpg" 
+            alt="Teaser Image" 
+            style="max-width: 100%; width: auto; height: auto; display: block;"
+          >
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <section class="section">
+    <h2 class="title is-3" style="text-align: center;">Evaluation</h2>
+
+    <div class="container is-max-desktop" >
+        <div class="columns is-centered has-text-centered" >
+
+    <!-- Visual Effects. -->
+    <div class="column">
+      <div class="content">
+        <!-- <h2 class="title is-3">Visual Effects</h2> -->
+        <p style="max-width: 90%; text-align: justify;" >
+            Our Art-Free Diffusion model shows limited style trans- fer with training-free methods, suggesting that traditional models may
+             rely on inherent artistic biases. Unlike our model, traditional models have seen vast amounts of art, enabling them to internalize stylistic 
+             patterns for effective style transfer.
+        </p>
+        <img 
+        src="./static/images_art/stylealigned.jpg" 
+        alt="Teaser Image" 
+        style="max-width: 90%; width: auto; height: auto; display: block;" 
+      >
+      </div>
+    </div>
+    <!--/ Visual Effects. -->
+
+    <!-- Matting. -->
+    <div class="column">
+      <!-- <h2 class="title is-3">Matting</h2> -->
+      <div class="columns is-centered">
+        <div class="column content">
+          <p style="text-align: justify;">
+            (Left) Results of the Perceptual User Study; Art-Free Diffusion with Adapter method (green bar) is preferred over im- age editing baselines,
+             on par with Adapter on the SD1.4 backbone and favored less with StyleAligned (SD1.4), however the margin of preference is narrow between the baselines. 
+             (Right) Quantita- tive evaluation of the baselines, 
+            Art-Free Diffusion with the Art Adapter acheives a good trade-off between the style and content.
+          </p>
+          <img 
+          src="./static/images_art/combined_method_stylization_plots.jpg" 
+          alt="Teaser Image" 
+          style="max-width: 100%; width: auto; height: auto; display: block; padding-top: 10px;"
+        >
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<br>
+
+
+  <section class="section">
+    <div class="container is-max-desktop"  style="width: 100%; max-width: none;">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered" >
+        <div class="column is-four-fifths">
+            <h2 class="title is-3" style="text-align: center;">Qualitative Comparison - Image Stylization</h2>
+
+            <p>
+                Comparison of our method and other image stylization baselines for the artist Van Gogh. All captions contain a suffix 
+                <em>“in the style of Vincent van Gogh / V<sup>*</sup> art”</em>”</em>.
+            </p>
+          <div class="content has-text-justified">
+
+
+            <img 
+            src="./static/images_art/stylization_cvpr.jpg" 
+            alt="Teaser Image" 
+            style="max-width: 100%; width: auto; height: auto; display: block;"
+          >
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+
+  <section class="hero is-small">
+    <h2 class="title is-3" style="text-align: center;">Qualitative Results</h2>
+    <p style="text-align: justify; width: 50%; margin: 0 auto; line-height: 1.6;">
+
+        Art generation results (of art generation and image stylization) and training images are shown in <em>Figures 20–36</em>. 
+        We demonstrate our model’s ability to replicate diverse artistic styles: Impressionism (<em>Monet, van Gogh, Corot</em>), 
+        Art Nouveau (<em>Klimt</em>), Fauvism (<em>Derain</em>), Abstract Expressionism (<em>Matisse, Pollock, Richter</em>), 
+        Abstract Art (<em>Kandinsky</em>), Cubism (<em>Picasso, Gleizes</em>), Pop Art (<em>Lichtenstein, Warhol</em>), 
+        Ukiyo-e (<em>Hokusai</em>), Expressionism (<em>Escher</em>), and Postmodern and Geometric Abstraction 
+        (<em>Miró, Battiss</em>). The captions and reference images are sampled from the <em>LAION Pop dataset</em>.
+    </p>
+    <div class="hero-body">
+      <div class="container">
+
+
+<br>
+        <div class="carousel results-carousel" >
+
+
+
+
+          <!-- First Item -->
+          <div class="item item-steve">
+            <img src="./static/images_art/warhol.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/alan.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/batiss.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/corot.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/derain.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/escher.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/gleizes.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/hokusai.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/kandinsky.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/klimt.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/lichtenstein.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/matisse.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/miro.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/monet.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/picasso.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/pollock.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/richter.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+          <div class="item item-steve">
+            <img src="./static/images_art/vangogh.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<br>
+
+
+  
+
+  <section class="hero ">
+    <h2 class="title is-3" style="text-align: center;">Data Attribution</h2>
+    <p style="text-align: justify; width: 50%; margin: 0 auto; line-height: 1.6;">
+        We find that our Art Adapter can generalize from a small Art-Style training set and generate seemingly novel images 
+        that are coherent with the given artistic style. To better understand which training images contributed to the synthesized 
+        image, and to check whether the art filtering may have overlooked some art content that influenced the result, we applied 
+        an off-the-shelf data attribution technique. For each 
+        generated image, we retrieved the top five attributed images from both Art-Free SAM and Art-Style examples. 
+        While we expect stylistic elements to dominate, 
+        real-world influences from the Art-Free dataset play a significant role. In the style-inspired generation, distinctive artistic features 
+        capture the essence of the style, yet the attribution method uncovers real-world elements beneath, as though the style has been gently overlaid on the content.
+    </p>
+    <div class="hero-body">
+      <div class="container">
+
+        <br>
+        <div class="carousel results-carousel2" >
+
+          <!-- First Item -->
+          <div class="item item-steve">
+            <img src="./static/images_art/a_miro.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/a_lichtenstein.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/a_derain.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/a_escher.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/a_kandinsky.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/a_klimt.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/a_matisse.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/a_picasso.jpg" alt="Steve Thumbnail"   >
+          </div>
+          <div class="item item-steve">
+            <img src="./static/images_art/a_warhol.jpg" alt="Steve Thumbnail"   >
+          </div>
+
+
+
+        </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{ren2024art-free},
+  author    = {Hui Ren and Joanna Materzynska and Rohit Gandikota and David Bau and Antonio Torralba},
+  title     = {Art-Free Generative Models: Art Creation Without Graphic Art Knowledge},
+  journal   = {arxiv},
+  year      = {2024},
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the Nerfies project page. If you want to reuse their source code, please credit them appropriately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
