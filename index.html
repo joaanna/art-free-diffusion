@@ -38,7 +38,7 @@
 
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Art-Free Generative Models:
@@ -110,7 +110,7 @@
 </section>
 
 <section class="hero teaser">
-    <div class="container is-max-desktop" style="width: 80%; max-width: none;">
+    <div class="container" >
       <div class="hero-body" style="text-align: center;">
           <img 
             src="./static/images_art/teaser_antoniov4.jpg" 
@@ -138,7 +138,7 @@
 
 
 <section class="section hero is-light">
-    <div class="container is-max-desktop">
+    <div class="container">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -164,10 +164,10 @@
 
 
 <section class="section">
-    <div class="container is-max-desktop">
+    <div class="container">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="column ">
           <h2 class="title is-3">Art-Free Diffusion</h2>
           <div class="content has-text-justified">
             <p>
@@ -183,7 +183,7 @@
             <img 
             src="./static/images_art/artnotartv2.jpg" 
             alt="Teaser Image" 
-            style="max-width: 100%; width: auto; height: auto; display: block;"
+            style="max-width: 80%; width: auto; height: auto; display: block; margin: 0 auto;"
           >
           </div>
         </div>
@@ -193,13 +193,13 @@
   <br>
 
 
-  <section class="hero teaser">
-    <div class="container is-max-desktop" style="width: 100%; max-width: none;">
+<section class="hero">
+
       <div class="hero-body" style="text-align: center;">
-    
-      <!-- Abstract. -->
+        <div class="container" >
+      <!-- Method. -->
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="column ">
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified" style="text-align: justify;">
             <p style="text-align: justify;">
@@ -220,7 +220,7 @@
             <img 
             src="./static/images_art/method_antonio.jpg" 
             alt="Teaser Image" 
-            style="max-width: 100%; width: auto; height: auto; display: block;"
+            style=" width: auto; height: auto; display: block;"
           >
           </div>
         </div>
@@ -231,17 +231,18 @@
 
   <br>
 
-  <section class="section">
+<section class="section">
+    <div class="hero-body" style="text-align: center;">
     <h2 class="title is-3" style="text-align: center;">Evaluation</h2>
 
-    <div class="container is-max-desktop" >
+    <div class="container " >
         <div class="columns is-centered has-text-centered" >
 
     <!-- Visual Effects. -->
     <div class="column">
       <div class="content">
         <!-- <h2 class="title is-3">Visual Effects</h2> -->
-        <p style="max-width: 90%; text-align: justify;" >
+        <p style=" text-align: justify;" >
             Our Art-Free Diffusion model shows limited style trans- fer with training-free methods, suggesting that traditional models may
              rely on inherent artistic biases. Unlike our model, traditional models have seen vast amounts of art, enabling them to internalize stylistic 
              patterns for effective style transfer.
@@ -249,7 +250,7 @@
         <img 
         src="./static/images_art/stylealigned.jpg" 
         alt="Teaser Image" 
-        style="max-width: 90%; width: auto; height: auto; display: block;" 
+        style="width: auto; height: auto; display: block;"
       >
       </div>
     </div>
@@ -269,7 +270,7 @@
           <img 
           src="./static/images_art/combined_method_stylization_plots.jpg" 
           alt="Teaser Image" 
-          style="max-width: 100%; width: auto; height: auto; display: block; padding-top: 10px;"
+          style=" width: auto; height: auto; display: block; padding-top: 10px;"
         >
         </div>
 
@@ -277,17 +278,19 @@
     </div>
   </div>
 </div>
+</div>
 </section>
 
 
 <br>
 
 
-  <section class="section">
-    <div class="container is-max-desktop"  style="width: 100%; max-width: none;">
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container"  >
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered" >
-        <div class="column is-four-fifths">
+        <div class="column ">
             <h2 class="title is-3" style="text-align: center;">Qualitative Comparison - Image Stylization</h2>
 
             <p>
@@ -300,20 +303,23 @@
             <img 
             src="./static/images_art/stylization_cvpr.jpg" 
             alt="Teaser Image" 
-            style="max-width: 100%; width: auto; height: auto; display: block;"
+            style="width: auto; height: auto; display: block;"
           >
 
           </div>
         </div>
       </div>
     </div>
+    </div>
   </section>
   <br>
 
 
   <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
     <h2 class="title is-3" style="text-align: center;">Qualitative Results</h2>
-    <p style="text-align: justify; width: 50%; margin: 0 auto; line-height: 1.6;">
+    <p style="text-align: justify;  margin: 0 auto; line-height: 1.6;">
 
         Art generation results (of art generation and image stylization) and training images are shown in <em>Figures 20–36</em>. 
         We demonstrate our model’s ability to replicate diverse artistic styles: Impressionism (<em>Monet, van Gogh, Corot</em>), 
@@ -323,16 +329,9 @@
         (<em>Miró, Battiss</em>). The captions and reference images are sampled from the <em>LAION Pop dataset</em>. 
         The examples shown are generated after training on just 10-15 samples from the artist, representing the model's only exposure to the artistic style.
     </p>
-    <div class="hero-body">
-      <div class="container">
-
 
 <br>
-        <div class="carousel results-carousel" >
-
-
-
-
+        <div class="carousel results-carousel">
           <!-- First Item -->
           <div class="item item-steve">
             <img src="./static/images_art/warhol.jpg" alt="Steve Thumbnail"   >
@@ -356,11 +355,11 @@
           </div>
 
           <div class="item item-steve">
-            <img src="./static/images_art/gleizes.jpg" alt="Steve Thumbnail"   >
+            <img src="./static/images_art/gleizes.jpg" alt="Steve Thumbnail"  >
           </div>
 
           <div class="item item-steve">
-            <img src="./static/images_art/hokusai.jpg" alt="Steve Thumbnail"   >
+            <img src="./static/images_art/hokusai.jpg" alt="Steve Thumbnail"  >
           </div>
 
           <div class="item item-steve">
@@ -368,7 +367,7 @@
           </div>
 
           <div class="item item-steve">
-            <img src="./static/images_art/klimt.jpg" alt="Steve Thumbnail"   >
+            <img src="./static/images_art/klimt.jpg" alt="Steve Thumbnail"  >
           </div>
 
           <div class="item item-steve">
@@ -376,35 +375,35 @@
           </div>
 
           <div class="item item-steve">
-            <img src="./static/images_art/matisse.jpg" alt="Steve Thumbnail"   >
+            <img src="./static/images_art/matisse.jpg" alt="Steve Thumbnail"  >
           </div>
 
           <div class="item item-steve">
-            <img src="./static/images_art/miro.jpg" alt="Steve Thumbnail"   >
+            <img src="./static/images_art/miro.jpg" alt="Steve Thumbnail" >
           </div>
 
           <div class="item item-steve">
-            <img src="./static/images_art/monet.jpg" alt="Steve Thumbnail"   >
+            <img src="./static/images_art/monet.jpg" alt="Steve Thumbnail"  >
           </div>
 
           <div class="item item-steve">
-            <img src="./static/images_art/picasso.jpg" alt="Steve Thumbnail"   >
+            <img src="./static/images_art/picasso.jpg" alt="Steve Thumbnail"  >
           </div>
 
           <div class="item item-steve">
-            <img src="./static/images_art/pollock.jpg" alt="Steve Thumbnail"   >
+            <img src="./static/images_art/pollock.jpg" alt="Steve Thumbnail" >
           </div>
 
           <div class="item item-steve">
-            <img src="./static/images_art/richter.jpg" alt="Steve Thumbnail"   >
+            <img src="./static/images_art/richter.jpg" alt="Steve Thumbnail"  >
           </div>
 
           <div class="item item-steve">
-            <img src="./static/images_art/vangogh.jpg" alt="Steve Thumbnail"   >
+            <img src="./static/images_art/vangogh.jpg" alt="Steve Thumbnail"  >
           </div>
 
 
-  
+
         </div>
       </div>
     </div>
@@ -417,7 +416,9 @@
 
   <section class="hero ">
     <h2 class="title is-3" style="text-align: center;">Data Attribution</h2>
-    <p style="text-align: justify; width: 50%; margin: 0 auto; line-height: 1.6;">
+    <div class="hero-body">
+      <div class="container">
+    <p style="text-align: justify; margin: 0 auto; line-height: 1.6;">
         We find that our Art Adapter can generalize from a small Art-Style training set and generate seemingly novel images 
         that are coherent with the given artistic style. To better understand which training images contributed to the synthesized 
         image, and to check whether the art filtering may have overlooked some art content that influenced the result, we applied 
@@ -427,11 +428,10 @@
         real-world influences from the Art-Free dataset play a significant role. In the style-inspired generation, distinctive artistic features 
         capture the essence of the style, yet the attribution method uncovers real-world elements beneath, as though the style has been gently overlaid on the content.
     </p>
-    <div class="hero-body">
-      <div class="container">
+
 
         <br>
-        <div class="carousel results-carousel2" >
+        <div class="carousel results-carousel2">
 
           <!-- First Item -->
           <div class="item item-steve">
@@ -474,7 +474,7 @@
 
 
 <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
+  <div class="container">
     <h2 class="title">BibTeX</h2>
 <!--    <pre><code>@article{ren2024art-free},-->
 <!--  author    = {Hui Ren and Joanna Materzynska and Rohit Gandikota and David Bau and Antonio Torralba},-->
