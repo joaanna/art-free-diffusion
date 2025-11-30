@@ -270,16 +270,14 @@
       <div class="column is-four-fifths section-card">
         <!-- <h2 class="title is-3">Abstract</h2> -->
         <div class="content has-text-justified">
-          <p>
-            We explore the question: ``How much prior art knowledge is needed to create art?".
-            To find out, we designed a text-to-image generation model that skips training on art-related content entirely. Then, we developed a straightforward method to create an "art adapter," which learns artistic styles using just a handful of examples. Our experiments reveal that the art generated this way is rated by users as on par with pieces from models trained on massive, art-heavy datasets.
-            Finally, through data attribution techniques, we illustrate how examples from both artistic and non-artistic datasets contributed to the creation of new artistic styles.
-          </p>
-<br>
-<p> 
-  Text-to-image generation models have revolutionized generative AI, producing high-quality, user-defined images that have even won art competitions. However, their ability to replicate specific artistic styles and potential memorization of training data has raised ethical and legal concerns, leading to lawsuits from artists. While opt-out strategies and watermarking have been proposed to address these issues, 
-  they often face scalability and effectiveness challenges. 
-  Our approach takes a different path, showing that it is potentially possible to develop tools valuable to artists without training on art datasets at all. By focusing on post-training adaptations, we offer a solution that respects intellectual property while fostering creativity and innovation.
+<p>
+We explore whether pre-training on datasets with paintings is necessary for a model to learn an artistic style with only a few examples. To investigate this, we train a text-to-image model exclusively on photographs, without access to any painting-related content. 
+</p>
+<p>
+We show that it is possible to adapt a model that is trained without paintings to an artistic style, given only few examples. User studies and automatic evaluations confirm that our model (post-adaptation) performs on par with state-of-the-art models trained on massive datasets that contain artistic content like paintings, drawings or illustrations.
+</p>
+<p>
+Finally, using data attribution techniques, we analyze how both artistic and non-artistic datasets contribute to generating artistic-style images. Surprisingly, our findings suggest that high-quality artistic outputs can be achieved without prior exposure to artistic data, indicating that artistic style generation can occur in a controlled, opt-in manner using only a limited, carefully selected set of training examples.
 </p>
         </div>
       </div>
