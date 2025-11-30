@@ -74,6 +74,37 @@
       font-weight: 700;
     }
 
+    .teaser-summary {
+      margin-top: 1.5rem;
+    }
+
+    .teaser-card {
+      background: #f6f9fc;
+      border: 1px solid #e6eef7;
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      height: 100%;
+      box-shadow: 0 10px 28px rgba(16, 44, 84, 0.08);
+      text-align: left;
+    }
+
+    .teaser-label {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      color: #0c6fb0;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+    }
+
+    .teaser-text {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+      color: #2d3748;
+    }
+
     @keyframes badge-glow {
       0%, 100% {
         background-position: 0% 50%;
@@ -95,11 +126,11 @@
 
 
 
-<section class="hero">
+<section class="hero page-hero">
   <div class="hero-body">
-    <div class="container">
+    <div class="container narrow">
       <div class="columns is-centered">
-        <div class="column has-text-centered">
+        <div class="column has-text-centered section-card">
           <h1 class="title is-1 publication-title">Opt-In Art: Learning Art Styles Only from Few Examples</h1>
           <div class="is-size-5 publication-authors">
             <div class="author-block">
@@ -196,39 +227,47 @@
 </section>
 
 <section class="hero teaser">
-    <div class="container" >
+    <div class="container narrow" >
       <div class="hero-body" style="text-align: center;">
           <img 
             src="./static/images_art/teaser.png" 
             alt="Teaser Image" 
             style="max-width: 100%; width: auto; height: auto; display: block;"
           >
-  
-        <h2 class="subtitle has-text-centered" style="font-size: 14px;">
-          (a) We introduce Blank Canvas Diffusion, a carefully curated text-to-image model trained only on photographs, serving as the pretraining foundation for our model. Our study explores whether a model with no prior exposure to paintings can learn artistic styles using <br>
-          (b) a LoRA Art Adapter trained on a small opt-in sample of an artist's work. <br>
-          (c) We find that it is possible to adapt a model that is trained without paintings to generalize an artistic style, given only few examples.
-        </h2>
+        <div class="columns is-variable is-6 is-centered teaser-summary">
+          <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
+            <div class="teaser-card">
+              <span class="teaser-label">(a)</span>
+              <p class="teaser-text">
+                We introduce Blank Canvas Diffusion, a carefully curated text-to-image model trained only on photographs, serving as the pretraining foundation for our model.
+              </p>
+            </div>
+          </div>
+          <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
+            <div class="teaser-card">
+              <span class="teaser-label">(b)</span>
+              <p class="teaser-text">
+                We explore whether a model with no prior exposure to paintings can learn artistic styles using a LoRA Art Adapter trained on a small opt-in sample of an artist's work.
+              </p>
+            </div>
+          </div>
+          <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
+            <div class="teaser-card">
+              <span class="teaser-label">(c)</span>
+              <p class="teaser-text">
+                We find that a model trained without paintings can generalize an artistic style from only a few examples through this adapter approach.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  
-
-
-                    </div>
-                </div>
-            </div>
-  
-    </div>
-  </div>
-</section> 
-
-
-<section class="section hero is-light">
-    <div class="container">
+<section class="section">
+    <div class="container narrow">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-four-fifths section-card">
         <!-- <h2 class="title is-3">Abstract</h2> -->
         <div class="content has-text-justified">
           <p>
@@ -251,10 +290,10 @@
 
 
 <section class="section">
-    <div class="container">
+    <div class="container narrow">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
-        <div class="column ">
+        <div class="column section-card">
           <h2 class="title is-3">Blank Canvas Diffusion</h2>
           <div class="content has-text-justified">
             <p>
@@ -283,10 +322,10 @@
 <section class="hero">
 
       <div class="hero-body" style="text-align: center;">
-        <div class="container" >
+        <div class="container narrow" >
       <!-- Method. -->
       <div class="columns is-centered has-text-centered">
-        <div class="column ">
+        <div class="column section-card">
           <h2 class="title is-3">Method</h2>
           <div class="content has-text-justified" style="text-align: justify;">
             <p style="text-align: justify;">
@@ -318,10 +357,10 @@
 
 <!--  <br>-->
 <section class="section">
-    <div class="container">
+    <div class="container narrow">
         <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
-            <div class="column ">
+            <div class="column section-card">
 <!--                <h2 class="title is-3">Demo</h2>-->
                 <h2 class="title is-3">Demo</h2>
 
@@ -338,63 +377,63 @@
 </section>
 
 <section class="section">
-    <div class="hero-body" style="text-align: center;">
-    <h2 class="title is-3" style="text-align: center;">Evaluation</h2>
+    <div class="container narrow">
+      <div class="section-card">
+        <div class="has-text-centered">
+          <h2 class="title is-3" style="text-align: center;">Evaluation</h2>
 
-    <div class="container " >
-        <div class="columns is-centered has-text-centered" >
+          <div class="columns is-centered has-text-centered" >
 
-    <!-- Visual Effects. -->
-    <div class="column">
-      <div class="content">
-        <!-- <h2 class="title is-3">Visual Effects</h2> -->
-        <p style=" text-align: justify;" >
-            Our Blank Canvas Diffusion model shows limited style trans- fer with training-free methods, suggesting that traditional models may
-             rely on inherent artistic biases. Unlike our model, traditional models have seen vast amounts of art, enabling them to internalize stylistic 
-             patterns for effective style transfer.
-        </p>
-        <img 
-        src="./static/images_art/stylealigned.jpg" 
-        alt="Teaser Image" 
-        style="width: auto; height: auto; display: block;"
-      >
-      </div>
-    </div>
-    <!--/ Visual Effects. -->
-
-    <!-- Matting. -->
-    <div class="column">
-      <!-- <h2 class="title is-3">Matting</h2> -->
-      <div class="columns is-centered">
-        <div class="column content">
-          <p style="text-align: justify;">
-            (Left) Results of the Perceptual User Study; Blank Canvas Diffusion with Adapter method (green bar) is preferred over im- age editing baselines,
-             on par with Adapter on the SD1.4 backbone and favored less with StyleAligned (SD1.4), however the margin of preference is narrow between the baselines. 
-             (Right) Quantita- tive evaluation of the baselines, 
-            Blank Canvas Diffusion with the Art Adapter acheives a good trade-off between the style and content.
-          </p>
-          <img 
-          src="./static/images_art/combined_method_stylization_plots.jpg" 
-          alt="Teaser Image" 
-          style=" width: auto; height: auto; display: block; padding-top: 10px;"
-        >
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <!-- <h2 class="title is-3">Visual Effects</h2> -->
+            <p style=" text-align: justify;" >
+                Our Blank Canvas Diffusion model shows limited style trans- fer with training-free methods, suggesting that traditional models may
+                 rely on inherent artistic biases. Unlike our model, traditional models have seen vast amounts of art, enabling them to internalize stylistic 
+                 patterns for effective style transfer.
+            </p>
+            <img 
+            src="./static/images_art/stylealigned.jpg" 
+            alt="Teaser Image" 
+            style="width: auto; height: auto; display: block;"
+          >
+          </div>
         </div>
+        <!--/ Visual Effects. -->
 
+        <!-- Matting. -->
+        <div class="column">
+          <!-- <h2 class="title is-3">Matting</h2> -->
+          <div class="columns is-centered">
+            <div class="column content">
+              <p style="text-align: justify;">
+                (Left) Results of the Perceptual User Study; Blank Canvas Diffusion with Adapter method (green bar) is preferred over im- age editing baselines,
+                 on par with Adapter on the SD1.4 backbone and favored less with StyleAligned (SD1.4), however the margin of preference is narrow between the baselines. 
+                 (Right) Quantita- tive evaluation of the baselines, 
+                Blank Canvas Diffusion with the Art Adapter acheives a good trade-off between the style and content.
+              </p>
+              <img 
+              src="./static/images_art/combined_method_stylization_plots.jpg" 
+              alt="Teaser Image" 
+              style=" width: auto; height: auto; display: block; padding-top: 10px;"
+            >
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
+    </div>
 </section>
 
 
 <br>
 
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container"  >
-      <!-- Abstract. -->
+<section class="section">
+  <div class="container narrow">
+    <div class="section-card">
       <div class="columns is-centered has-text-centered" >
         <div class="column ">
             <h2 class="title is-3" style="text-align: center;">Qualitative Comparison - Image Stylization</h2>
@@ -416,182 +455,178 @@
         </div>
       </div>
     </div>
-    </div>
-  </section>
+  </div>
+</section>
   <br>
 
 
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-    <h2 class="title is-3" style="text-align: center;">Qualitative Results</h2>
-    <p style="text-align: justify;  margin: 0 auto; line-height: 1.6;">
+<section class="section">
+  <div class="container narrow">
+    <div class="section-card">
+      <h2 class="title is-3" style="text-align: center;">Qualitative Results</h2>
+      <p style="text-align: justify;  margin: 0 auto; line-height: 1.6;">
 
-        Art generation results (of art generation and image stylization) and training images are shown in <em>Figures 20–36</em>. 
-        We demonstrate our model’s ability to replicate diverse artistic styles: Impressionism (<em>Monet, van Gogh, Corot</em>), 
-        Art Nouveau (<em>Klimt</em>), Fauvism (<em>Derain</em>), Abstract Expressionism (<em>Matisse, Pollock, Richter</em>), 
-        Abstract Art (<em>Kandinsky</em>), Cubism (<em>Picasso, Gleizes</em>), Pop Art (<em>Lichtenstein, Warhol</em>), 
-        Ukiyo-e (<em>Hokusai</em>), Expressionism (<em>Escher</em>), and Postmodern and Geometric Abstraction 
-        (<em>Miró, Battiss</em>). The captions and reference images are sampled from the <em>LAION Pop dataset</em>. 
-        The examples shown are generated after training on just 10-15 samples from the artist, representing the model's only exposure to the artistic style.
-    </p>
+          Art generation results (of art generation and image stylization) and training images are shown in <em>Figures 20–36</em>. 
+          We demonstrate our model’s ability to replicate diverse artistic styles: Impressionism (<em>Monet, van Gogh, Corot</em>), 
+          Art Nouveau (<em>Klimt</em>), Fauvism (<em>Derain</em>), Abstract Expressionism (<em>Matisse, Pollock, Richter</em>), 
+          Abstract Art (<em>Kandinsky</em>), Cubism (<em>Picasso, Gleizes</em>), Pop Art (<em>Lichtenstein, Warhol</em>), 
+          Ukiyo-e (<em>Hokusai</em>), Expressionism (<em>Escher</em>), and Postmodern and Geometric Abstraction 
+          (<em>Miró, Battiss</em>). The captions and reference images are sampled from the <em>LAION Pop dataset</em>. 
+          The examples shown are generated after training on just 10-15 samples from the artist, representing the model's only exposure to the artistic style.
+      </p>
 
-<br>
-        <div class="carousel results-carousel">
-          <!-- First Item -->
-          <div class="item item-steve">
-            <img src="./static/images_art/warhol.jpg" alt="Steve Thumbnail"   >
+  <br>
+          <div class="carousel results-carousel">
+            <!-- First Item -->
+            <div class="item item-steve">
+              <img src="./static/images_art/warhol.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/alan.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/batiss.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/corot.jpg" alt="Steve Thumbnail"   >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/derain.jpg" alt="Steve Thumbnail"   >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/escher.jpg" alt="Steve Thumbnail"   >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/gleizes.jpg" alt="Steve Thumbnail"  >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/hokusai.jpg" alt="Steve Thumbnail"  >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/kandinsky.jpg" alt="Steve Thumbnail"   >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/klimt.jpg" alt="Steve Thumbnail"  >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/lichtenstein.jpg" alt="Steve Thumbnail"   >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/matisse.jpg" alt="Steve Thumbnail"  >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/miro.jpg" alt="Steve Thumbnail" >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/monet.jpg" alt="Steve Thumbnail"  >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/picasso.jpg" alt="Steve Thumbnail"  >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/pollock.jpg" alt="Steve Thumbnail" >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/richter.jpg" alt="Steve Thumbnail"  >
+            </div>
+
+            <div class="item item-steve">
+              <img src="./static/images_art/vangogh.jpg" alt="Steve Thumbnail"  >
+            </div>
+
+
+
           </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/alan.jpg" alt="Steve Thumbnail"   >
-          </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/batiss.jpg" alt="Steve Thumbnail"   >
-          </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/corot.jpg" alt="Steve Thumbnail"   >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/derain.jpg" alt="Steve Thumbnail"   >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/escher.jpg" alt="Steve Thumbnail"   >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/gleizes.jpg" alt="Steve Thumbnail"  >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/hokusai.jpg" alt="Steve Thumbnail"  >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/kandinsky.jpg" alt="Steve Thumbnail"   >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/klimt.jpg" alt="Steve Thumbnail"  >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/lichtenstein.jpg" alt="Steve Thumbnail"   >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/matisse.jpg" alt="Steve Thumbnail"  >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/miro.jpg" alt="Steve Thumbnail" >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/monet.jpg" alt="Steve Thumbnail"  >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/picasso.jpg" alt="Steve Thumbnail"  >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/pollock.jpg" alt="Steve Thumbnail" >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/richter.jpg" alt="Steve Thumbnail"  >
-          </div>
-
-          <div class="item item-steve">
-            <img src="./static/images_art/vangogh.jpg" alt="Steve Thumbnail"  >
-          </div>
-
-
-
         </div>
       </div>
-    </div>
   </section>
   
 <br>
 
 
-  
-
-  <section class="hero ">
-    <h2 class="title is-3" style="text-align: center;">Data Attribution</h2>
-    <div class="hero-body">
-      <div class="container">
-    <p style="text-align: justify; margin: 0 auto; line-height: 1.6;">
-        We find that our Art Adapter can generalize from a small Art-Style training set and generate seemingly novel images 
-        that are coherent with the given artistic style. To better understand which training images contributed to the synthesized 
-        image, and to check whether the art filtering may have overlooked some art content that influenced the result, we applied 
-        an off-the-shelf data attribution technique. For each 
-        generated image, we retrieved the top five attributed images from both Blank Canvas Dataset and Art-Style examples. 
-        While we expect stylistic elements to dominate, 
-        real-world influences from the Blank Canvas Dataset play a significant role. In the style-inspired generation, distinctive artistic features 
-        capture the essence of the style, yet the attribution method uncovers real-world elements beneath, as though the style has been gently overlaid on the content.
-    </p>
+<section class="section">
+  <div class="container narrow">
+    <div class="section-card">
+      <h2 class="title is-3" style="text-align: center;">Data Attribution</h2>
+      <p style="text-align: justify; margin: 0 auto; line-height: 1.6;">
+          We find that our Art Adapter can generalize from a small Art-Style training set and generate seemingly novel images 
+          that are coherent with the given artistic style. To better understand which training images contributed to the synthesized 
+          image, and to check whether the art filtering may have overlooked some art content that influenced the result, we applied 
+          an off-the-shelf data attribution technique. For each 
+          generated image, we retrieved the top five attributed images from both Blank Canvas Dataset and Art-Style examples. 
+          While we expect stylistic elements to dominate, 
+          real-world influences from the Blank Canvas Dataset play a significant role. In the style-inspired generation, distinctive artistic features 
+          capture the essence of the style, yet the attribution method uncovers real-world elements beneath, as though the style has been gently overlaid on the content.
+      </p>
 
 
-        <br>
-        <div class="carousel results-carousel2">
+          <br>
+          <div class="carousel results-carousel2">
 
-          <!-- First Item -->
-          <div class="item item-steve">
-            <img src="./static/images_art/a_miro.jpg" alt="Steve Thumbnail"   >
-          </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/a_lichtenstein.jpg" alt="Steve Thumbnail"   >
-          </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/a_derain.jpg" alt="Steve Thumbnail"   >
-          </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/a_escher.jpg" alt="Steve Thumbnail"   >
-          </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/a_kandinsky.jpg" alt="Steve Thumbnail"   >
-          </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/a_klimt.jpg" alt="Steve Thumbnail"   >
-          </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/a_matisse.jpg" alt="Steve Thumbnail"   >
-          </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/a_picasso.jpg" alt="Steve Thumbnail"   >
-          </div>
-          <div class="item item-steve">
-            <img src="./static/images_art/a_warhol.jpg" alt="Steve Thumbnail"   >
-          </div>
+            <!-- First Item -->
+            <div class="item item-steve">
+              <img src="./static/images_art/a_miro.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/a_lichtenstein.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/a_derain.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/a_escher.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/a_kandinsky.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/a_klimt.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/a_matisse.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/a_picasso.jpg" alt="Steve Thumbnail"   >
+            </div>
+            <div class="item item-steve">
+              <img src="./static/images_art/a_warhol.jpg" alt="Steve Thumbnail"   >
+            </div>
 
 
 
-        </div>
+          </div>
+      </div>
     </div>
-  </div>
 </section>
 
-  
-
-
-
 <section class="section" id="BibTeX">
-  <div class="container">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{ren2025optinartlearningart,
-      title={Opt-In Art: Learning Art Styles Only from Few Examples}, 
-      author={Hui Ren and Joanna Materzynska and Rohit Gandikota and David Bau and Antonio Torralba},
-      year={2025},
-      eprint={2412.00176},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2412.00176}, 
-    }
-    </code></pre>
+  <div class="container narrow">
+    <div class="section-card">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{ren2025optinartlearningart,
+        title={Opt-In Art: Learning Art Styles Only from Few Examples}, 
+        author={Hui Ren and Joanna Materzynska and Rohit Gandikota and David Bau and Antonio Torralba},
+        year={2025},
+        eprint={2412.00176},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2412.00176}, 
+      }
+      </code></pre>
+    </div>
       </div>
 </section>
 

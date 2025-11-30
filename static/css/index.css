@@ -1,11 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-cream: #f6f1e7;
+  --panel: #ffffff;
+  --ink: #0f172a;
+  --muted: #4b5563;
+  --accent: #1e7be3;
+  --accent-2: #f59d44;
+  --border: #e2d8c3;
+  --shadow: 0 18px 45px rgba(16, 34, 64, 0.08);
+  --radius: 18px;
+}
+
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+  background: var(--bg-cream);
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+p {
+  color: var(--muted);
 }
 
 
 .footer .icon-link {
     font-size: 25px;
-    color: #000;
+    color: var(--ink);
 }
 
 .link-block a {
@@ -25,10 +46,18 @@ body {
 
 .teaser {
   font-family: 'Google Sans', sans-serif;
+  background: linear-gradient(135deg, #fdf7ed 0%, #f1f4ff 100%);
+  border-radius: var(--radius);
+  margin: 1rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  overflow: hidden;
 }
 
 
 .publication-title {
+    letter-spacing: -0.5px;
+    color: var(--ink);
 }
 
 .publication-banner {
@@ -56,7 +85,7 @@ body {
 }
 
 .publication-venue {
-    color: #555;
+    color: var(--muted);
     width: fit-content;
     font-weight: bold;
 }
@@ -71,7 +100,7 @@ body {
 }
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+   color: var(--accent) !important;
 }
 
 .publication-authors a:hover {
@@ -110,25 +139,103 @@ body {
 .publication-body img {
 }
 
+.page-hero {
+  background: radial-gradient(120% 120% at 15% 20%, #dbe8ff 0%, rgba(219, 232, 255, 0) 55%),
+              radial-gradient(140% 140% at 85% 20%, #ffe9d2 0%, rgba(255, 233, 210, 0) 50%),
+              linear-gradient(120deg, #fef7ec 0%, #eef3ff 100%);
+  border-radius: 28px;
+  margin: 1.25rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero .hero-body {
+  padding: 3.5rem 2rem 3rem;
+}
+
+.page-hero .title {
+  color: var(--ink);
+}
+
+.page-hero .subtitle,
+.page-hero p {
+  color: var(--muted);
+}
+
+.section-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  margin: 1.5rem auto;
+}
+
+.narrow {
+  max-width: 1080px;
+}
+
+.publication-links .button {
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.publication-links .button:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(30, 123, 227, 0.2);
+}
+
+.subtitle.has-text-centered {
+  color: var(--muted);
+}
+
+img {
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+iframe {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.content.has-text-justified {
+  color: var(--muted);
+}
+
+.badge-wrapper {
+  margin-top: 1.25rem;
+}
+
+.footer {
+  background: transparent;
+  padding-top: 2rem;
+}
+
 
 .results-carousel2 {
-  /* padding-top: 400px; */
-  background-color: #FFFFFF;
+  background-color: var(--panel);
   overflow: hidden;
   height: auto;
   width: auto;
-  /* max-width: 100%; Full width of the parent container */
-  margin: 0 auto; /* Center the carousel */
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .results-carousel2 .item {
-  /* margin: 10px; */
   overflow: hidden;
-  /* border: 1px solid #bbb; */
-  /* border-radius: 10px; */
   padding-left: 50px;
   padding-right: 50px;
-    padding-bottom: 20px;
+  padding-bottom: 20px;
   height: auto;
   width: auto;
   font-size: 0;
@@ -136,23 +243,21 @@ body {
 
 
 .results-carousel {
-  /* padding-top: 400px; */
-  background-color: #FFFFFF;
+  background-color: var(--panel);
   overflow: hidden;
   height: auto;
   width: auto;
-  /* max-width: 100%; Full width of the parent container */
-  margin: 0 auto; /* Center the carousel */
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .results-carousel .item {
-  /* margin: 10px; */
   overflow: hidden;
-  /* border: 1px solid #bbb; */
-  /* border-radius: 10px; */
   padding-left: 50px;
   padding-right: 50px;
-    padding-bottom: 10px;
+  padding-bottom: 10px;
   height: auto;
   width: auto;
   font-size: 0;
@@ -200,4 +305,3 @@ body {
   background: #a7a7a7;
   margin-bottom: -5px;
 }
-
