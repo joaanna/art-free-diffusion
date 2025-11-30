@@ -7,8 +7,7 @@
         content="">
   <meta name="keywords" content="Generative Art, Diffusion Models">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Art-Free Generative Models:
-    Art Creation Without Graphic Art Knowledge</title>
+  <title>Opt-In Art: Learning Art Styles Only from Few Examples</title>
     <link rel="icon" href="data:,"> <!-- Empty favicon -->
 
   
@@ -24,6 +23,66 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <style>
+    .badge-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .creative-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.65rem 1.15rem;
+      border-radius: 999px;
+      color: #f5fbff;
+      background: linear-gradient(120deg, #0f9b8e 0%, #0b6fc2 50%, #0f9b8e 100%);
+      background-size: 200% 200%;
+      box-shadow: 0 12px 28px rgba(10, 103, 168, 0.25);
+      animation: badge-glow 8s ease-in-out infinite;
+    }
+
+    .creative-badge .badge-icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.18);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+      font-size: 16px;
+    }
+
+    .creative-badge .badge-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.2;
+    }
+
+    .creative-badge .badge-eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .creative-badge .badge-title {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    @keyframes badge-glow {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -44,27 +103,30 @@
           <h1 class="title is-1 publication-title">Opt-In Art: Learning Art Styles Only from Few Examples</h1>
           <div class="is-size-5 publication-authors">
             <div class="author-block">
-                                              <a href="https://rhfeiyang.top/">Hui Ren</a><sup>*, 2</sup>,
+                                              <a href="https://rhfeiyang.top/">Hui Ren</a><sup>*, 1, 2</sup>,
 
 
               </div>
               <div class="author-block">
-                              <a href="https://joaanna.github.io/">Joanna Materzynska</a><sup>*, 1</sup>,
+                              <a href="https://joaanna.github.io/">Joanna Materzynska</a><sup>*, 2</sup>,
 
               </div>
               <div class="author-block">
                 <a href="https://rohitgandikota.github.io/">Rohit Gandikota</a><sup>3</sup>,
               </div>
               <div class="author-block">
+                <a href="https://giannisdaras.github.io/">Giannis Daras</a><sup>2</sup>,
+              </div>
+              <div class="author-block">
                 <a href="https://baulab.info/">David Bau</a><sup>3</sup>,
               </div>
               <div class="author-block">
-                <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba</a><sup>1</sup>,
+                <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba</a><sup>2</sup>,
               </div>
               
               <div class="is-size-5 publication-authors">
-                                <span class="author-block"><sup>1</sup>MIT</span>
-                <span class="author-block"><sup>2</sup>ShanghaiTech University</span>
+                                <span class="author-block"><sup>1</sup>UIUC</span>
+                <span class="author-block"><sup>2</sup>MIT</span>
                 <span class="author-block"><sup>3</sup>Northeastern University</span>
               </div>
               
@@ -115,6 +177,17 @@
 
               </div>
             </div>
+            <div class="badge-wrapper" style="margin-top: 1.25rem;">
+              <div class="creative-badge">
+                <span class="badge-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </span>
+                <span class="badge-text">
+                  <span class="badge-eyebrow">NeurIPS 2025</span>
+                  <span class="badge-title">Creative AI Track</span>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -126,14 +199,15 @@
     <div class="container" >
       <div class="hero-body" style="text-align: center;">
           <img 
-            src="./static/images_art/teaser_antoniov4.jpg" 
+            src="./static/images_art/teaser.png" 
             alt="Teaser Image" 
             style="max-width: 100%; width: auto; height: auto; display: block;"
           >
   
         <h2 class="subtitle has-text-centered" style="font-size: 14px;">
-          (a) We introduce Art-Free SAM, a carefully curated text-to-image dataset with minimal graphic art content, used to pretrain Blank Canvas Diffusion model (θ).  <br>
-          (b) We show three famous artists styles reproduced and generalized by Blank Canvas Diffusion after exposing an Art Adapter to a small sample (A) of each artist’s work.
+          (a) We introduce Blank Canvas Diffusion, a carefully curated text-to-image model trained only on photographs, serving as the pretraining foundation for our model. Our study explores whether a model with no prior exposure to paintings can learn artistic styles using <br>
+          (b) a LoRA Art Adapter trained on a small opt-in sample of an artist's work. <br>
+          (c) We find that it is possible to adapt a model that is trained without paintings to generalize an artistic style, given only few examples.
         </h2>
       </div>
     </div>
@@ -455,9 +529,9 @@
         that are coherent with the given artistic style. To better understand which training images contributed to the synthesized 
         image, and to check whether the art filtering may have overlooked some art content that influenced the result, we applied 
         an off-the-shelf data attribution technique. For each 
-        generated image, we retrieved the top five attributed images from both Art-Free SAM and Art-Style examples. 
+        generated image, we retrieved the top five attributed images from both Blank Canvas Dataset and Art-Style examples. 
         While we expect stylistic elements to dominate, 
-        real-world influences from the Art-Free dataset play a significant role. In the style-inspired generation, distinctive artistic features 
+        real-world influences from the Blank Canvas Dataset play a significant role. In the style-inspired generation, distinctive artistic features 
         capture the essence of the style, yet the attribution method uncovers real-world elements beneath, as though the style has been gently overlaid on the content.
     </p>
 
@@ -508,21 +582,15 @@
 <section class="section" id="BibTeX">
   <div class="container">
     <h2 class="title">BibTeX</h2>
-<!--    <pre><code>@article{ren2024art-free},-->
-<!--  author    = {Hui Ren and Joanna Materzynska and Rohit Gandikota and David Bau and Antonio Torralba},-->
-<!--  title     = {Art-Free Generative Models: Art Creation Without Graphic Art Knowledge},-->
-<!--  journal   = {arxiv},-->
-<!--  year      = {2024},-->
-<!--</code></pre>-->
-    <pre><code>@misc{ren2024art-free,
-      title={Art-Free Generative Models: Art Creation Without Graphic Art Knowledge},
+    <pre><code>@misc{ren2025optinartlearningart,
+      title={Opt-In Art: Learning Art Styles Only from Few Examples}, 
       author={Hui Ren and Joanna Materzynska and Rohit Gandikota and David Bau and Antonio Torralba},
-      year={2024},
+      year={2025},
       eprint={2412.00176},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2412.00176},
-      }
+      url={https://arxiv.org/abs/2412.00176}, 
+    }
     </code></pre>
       </div>
 </section>
