@@ -41,8 +41,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Art-Free Generative Models:
-            Art Creation Without Graphic Art Knowledge</h1>
+          <h1 class="title is-1 publication-title">Opt-In Art: Learning Art Styles Only from Few Examples</h1>
           <div class="is-size-5 publication-authors">
             <div class="author-block">
                                               <a href="https://rhfeiyang.top/">Hui Ren</a><sup>*, 2</sup>,
@@ -133,8 +132,8 @@
           >
   
         <h2 class="subtitle has-text-centered" style="font-size: 14px;">
-          (a) We introduce Art-Free SAM, a carefully curated text-to-image dataset with minimal graphic art content, used to pretrain Art-Free Diffusion model (θ).  <br>
-          (b) We show three famous artists styles reproduced and generalized by Art-Free Diffusion after exposing an Art Adapter to a small sample (A) of each artist’s work.
+          (a) We introduce Art-Free SAM, a carefully curated text-to-image dataset with minimal graphic art content, used to pretrain Blank Canvas Diffusion model (θ).  <br>
+          (b) We show three famous artists styles reproduced and generalized by Blank Canvas Diffusion after exposing an Art Adapter to a small sample (A) of each artist’s work.
         </h2>
       </div>
     </div>
@@ -182,7 +181,7 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column ">
-          <h2 class="title is-3">Art-Free Diffusion</h2>
+          <h2 class="title is-3">Blank Canvas Diffusion</h2>
           <div class="content has-text-justified">
             <p>
            
@@ -191,7 +190,7 @@
                  It further includes "maybe not art" (e.g., artistic elements in daily objects like doors, signboards, or decorative cakes) and "definitely not art" (e.g., nature or landscapes).
                                     </p>
             <p>
-                We train the Art-Free Diffusion on a dataset containing minimal graphic content. Our Art-Free Diffusion model is built
+                We train the Blank Canvas Diffusion on a dataset containing minimal graphic content. Our Blank Canvas Diffusion model is built
             on a latent diffusion architecture, to prevent any art-related knowledge from leaking through the text embeddings, we instead use a language-only Text Encoder based on BERT.
                 </p>
             <img 
@@ -276,7 +275,7 @@
       <div class="content">
         <!-- <h2 class="title is-3">Visual Effects</h2> -->
         <p style=" text-align: justify;" >
-            Our Art-Free Diffusion model shows limited style trans- fer with training-free methods, suggesting that traditional models may
+            Our Blank Canvas Diffusion model shows limited style trans- fer with training-free methods, suggesting that traditional models may
              rely on inherent artistic biases. Unlike our model, traditional models have seen vast amounts of art, enabling them to internalize stylistic 
              patterns for effective style transfer.
         </p>
@@ -295,10 +294,10 @@
       <div class="columns is-centered">
         <div class="column content">
           <p style="text-align: justify;">
-            (Left) Results of the Perceptual User Study; Art-Free Diffusion with Adapter method (green bar) is preferred over im- age editing baselines,
+            (Left) Results of the Perceptual User Study; Blank Canvas Diffusion with Adapter method (green bar) is preferred over im- age editing baselines,
              on par with Adapter on the SD1.4 backbone and favored less with StyleAligned (SD1.4), however the margin of preference is narrow between the baselines. 
              (Right) Quantita- tive evaluation of the baselines, 
-            Art-Free Diffusion with the Art Adapter acheives a good trade-off between the style and content.
+            Blank Canvas Diffusion with the Art Adapter acheives a good trade-off between the style and content.
           </p>
           <img 
           src="./static/images_art/combined_method_stylization_plots.jpg" 
